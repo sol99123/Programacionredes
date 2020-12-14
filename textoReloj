@@ -1,0 +1,30 @@
+{ 
+super.init();    
+  try
+  {
+  _init(); 
+     } // ﬁn de try 
+  catch ( Exception e )    
+  { 
+  log( "Error al inicializar Hora", e ); 
+  throw e instanceof FacesException ? ( FacesException ) e: 
+   new FacesException( e );
+   } // ﬁn de catch
+ } // ﬁn del método init 
+ // método que se llama cuando ocurre una petición de devolución de envío 
+ public void preprocess()
+ {
+ // cuerpo vacío
+ } // ﬁn del método preprocess
+ // método al que se llama antes de desplegar la página
+ public void prerender()
+ {
+   textoReloj.setValue( DateFormat.getTimeInstance(
+      DateFormat.LONG ).format( new Date() ) ); 
+  } // ﬁn del método prerende
+  // método al que se llama una vez que se completa el despliegue, si se llamó a init 
+   public void destroy() 
+   {
+   // cuerpo vacío 
+   } // ﬁn del método destroy
+  } // ﬁn de la clase Hora
