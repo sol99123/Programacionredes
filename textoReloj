@@ -6,7 +6,8 @@ import com.sun.rave.web.ui.component.Body;
 import com.sun.rave.web.ui.component.Form;
 import com.sun.rave.web.ui.component.Head; 
 import com.sun.rave.web.ui.component.Html; 
-import com.sun.rave.web.ui.component.Link; 11 import com.sun.rave.web.ui.component.Page; 
+import com.sun.rave.web.ui.component.Link;
+import com.sun.rave.web.ui.component.Page; 
 import javax.faces.FacesException; 
 import com.sun.rave.web.ui.component.StaticText; 
 import java.text.DateFormat; 
@@ -23,8 +24,8 @@ public class Hora extends AbstractPageBean
     private Page page1 = new Page(); 
     public Page getPage1()
     {
-return page1;
-} // fin del método getPage1
+    return page1;
+    } // fin del método getPage1
  public void setPage1(Page p)
  {
  this.page1 = p;
